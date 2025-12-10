@@ -30,5 +30,6 @@ btn.addEventListener("click", () => {
   }
 });
 
+
 // Position initiale
 randomPosition();
