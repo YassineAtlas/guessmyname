@@ -16,6 +16,10 @@ btn.addEventListener("click", () => {
   clickCount++;
   randomPosition();
 
+  // Ajoute animation temporaire
+  btn.classList.add("animate");
+  setTimeout(() => btn.classList.remove("animate"), 600);
+
   if (clickCount === 5) {
     btn.textContent = "yallah safe kliki tchoufi";
   }
