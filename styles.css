@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #ff69b4, #c71585, #ff00ff);
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
@@ -15,16 +15,22 @@ body {
   height: 100%;
 }
 
-
 #magicBtn {
   position: absolute;
   padding: 12px 20px;
   font-size: 18px;
-  background: #ff9800;
+  background: #ffc0cb; /* rose pastel */
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s;
+  color: #c71585;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#magicBtn:hover {
+  transform: scale(1.1);
+  background: #ff69b4; /* rose vif */
+  color: #fff;
 }
 
 /* Animation de saut + rotation */
@@ -52,6 +58,6 @@ body {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 5px #fff; }
-  to { text-shadow: 0 0 20px #ff0; }
+  from { text-shadow: 0 0 5px #ffc0cb; }
+  to { text-shadow: 0 0 20px #ff00ff; }
 }
