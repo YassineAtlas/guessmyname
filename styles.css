@@ -1,56 +1,49 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #eee;
-  text-align: center;
   margin: 0;
-  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
-header {
-  padding: 20px;
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.controls {
-  margin: 20px;
-}
-
-button {
-  margin: 5px;
-  padding: 10px 15px;
+#magicBtn {
+  position: absolute;
+  padding: 12px 20px;
+  font-size: 18px;
+  background: #ff9800;
   border: none;
   border-radius: 8px;
-  background: #444;
-  color: #fff;
   cursor: pointer;
-}
-button:hover {
-  background: #666;
+  transition: transform 0.3s;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(6, 80px);
-  grid-gap: 10px;
-  justify-content: center;
-  margin: 20px auto;
+#magicBtn:hover {
+  transform: scale(1.1);
 }
 
-.cell {
-  width: 80px;
-  height: 80px;
-  background: #333;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+#finalText {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 2s ease forwards, glow 2s infinite alternate;
 }
 
-.cell.genius {
-  transform: rotate(10deg) scale(1.1);
-  box-shadow: 0 0 15px #fff;
-  animation: pulse 1s infinite alternate;
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes pulse {
-  from { box-shadow: 0 0 5px #fff; }
-  to { box-shadow: 0 0 20px #0ff; }
+@keyframes glow {
+  from { text-shadow: 0 0 5px #fff; }
+  to { text-shadow: 0 0 20px #ff0; }
 }
